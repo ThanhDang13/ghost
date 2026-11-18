@@ -1,0 +1,50 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.validate": ["javascript", "typescript", "typescriptreact"],
+  "prettier.requireConfig": true,
+  "prettier.configPath": "PLACEHOLDER",
+  "eslint.options": {
+    "overrideConfigFile": "PLACEHOLDER"
+  },
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.wordWrap": "on",
+  "editor.cursorBlinking": "expand",
+  "editor.mouseWheelZoom": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "files.readonlyInclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "search.exclude": {
+    "**/routeTree.gen.ts": true,
+    "**/.git/**": true,
+    "**/dist": true,
+    "**/.nx": true,
+    "**/.tmp": true,
+    "**/tmp/**": true
+  },
+  "files.watcherExclude": {
+    "**/routeTree.gen.ts": true,
+    "**/.git/**": true,
+    "**/.nx/**": true,
+    "**/.tmp/**": true,
+    "**/tmp/**": true
+  },
+  "files.exclude": {
+    "**/.agents": true,
+    "**/.nx": true,
+    "**/.tmp": true
+  },
+  "search.followSymlinks": false,
+  "js/ts.tsdk.path": "PLACEHOLDER",
+  "js/ts.preferences.importModuleSpecifier": "non-relative",
+  "references.preferredLocation": "view",
+  "js/ts.autoClosingTags.enabled": true,
+  "js/ts.suggest.paths": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "explorer.excludeGitIgnore": false,
+  "nxConsole.nxWorkspacePath": "PLACEHOLDER"
+}

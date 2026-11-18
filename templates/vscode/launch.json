@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach to Nx Debug (Pick Port)",
+      "type": "node",
+      "request": "attach",
+      "port": "${input:pickDebugPort}",
+      "restart": true,
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"],
+      "localRoot": "${workspaceFolder}",
+      "remoteRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Attach to Nx Debug (Custom Port)",
+      "type": "node",
+      "request": "attach",
+      "port": "${input:customDebugPort}",
+      "restart": true,
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"],
+      "localRoot": "${workspaceFolder}",
+      "remoteRoot": "${workspaceFolder}"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "pickDebugPort",
+      "type": "pickString",
+      "description": "Select Node debug port",
+      "options": ["9229", "9230", "9231", "9232"],
+      "default": "9229"
+    },
+    {
+      "id": "customDebugPort",
+      "type": "promptString",
+      "description": "Enter custom Node debug port",
+      "default": "9229"
+    }
+  ]
+}
