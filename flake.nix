@@ -37,14 +37,20 @@
                 fi
 
                 mkdir -p "$target_dir"
-                cp -r "$source_dir"/* "$target_dir/"
+
+                # Enable dotglob to include hidden files (e.g., .env, .gitkeep)
+                # Use -n (no-clobber) to prevent overwriting existing files
+                shopt -s dotglob
+                cp -rn "$source_dir"/* "$target_dir/"
+                shopt -u dotglob
+
                 chmod -R u+w "$target_dir"
 
                 if [ -f .gitignore ] && ! grep -qxF "$target_dir/" .gitignore; then
                   echo "$target_dir/" >> .gitignore
                 fi
 
-                echo "[ghost] Injected $target_dir/ and added to .gitignore"
+                echo "[ghost] Safely injected $target_dir/ (skipped existing files) and updated .gitignore"
               '';
             };
           in
